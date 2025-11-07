@@ -4,8 +4,22 @@ public class SumaAcumulada {
 
 	public static void main(String[] args) {
 		
-		System.out.println("Hola Mundo");
+		try {
+			int [] numeros = { 10, 5, -2, 2, 1, 5, 0, 7, -1, 3};
+			int sumaTotal;
+			sumaTotal = calcularSumaDivisiones(numeros);
+			System.out.println("Suma total de las divisiones: " + sumaTotal);
+		}catch (Exception e) {}
 
+	}
+	
+	public static int calcularSumaDivisiones(int[] numeros) throws Exception{
+		int suma = 0;
+		for (int i = 1; i <= numeros.length; i ++) {
+			int resultado = 100 / numeros[i];
+			suma += resultado;
+		}
+		return suma;
 	}
 
 }
